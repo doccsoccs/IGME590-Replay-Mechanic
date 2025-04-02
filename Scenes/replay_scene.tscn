@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://kw0e6jnn10ia"]
+
+[ext_resource type="PackedScene" uid="uid://bf7dkdewhbpc4" path="res://Prefabs/player.tscn" id="1_gojvx"]
+[ext_resource type="PackedScene" uid="uid://b1u4vo7pqfh74" path="res://Prefabs/terrain.tscn" id="2_6ns4d"]
+
+[node name="ReplayScene" type="Node2D"]
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Control" type="Control" parent="Background"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Background/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_gojvx")]
+position = Vector2(177, 487)
+
+[node name="Terrain" parent="." instance=ExtResource("2_6ns4d")]
+position = Vector2(572, 595)
+scale = Vector2(17.155, 1)
+
+[node name="Terrain2" parent="." instance=ExtResource("2_6ns4d")]
+position = Vector2(583, 493)
+scale = Vector2(4.395, 0.385)
+
+[node name="Terrain3" parent="." instance=ExtResource("2_6ns4d")]
+position = Vector2(867, 420)
+scale = Vector2(4.395, 0.385)

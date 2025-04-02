@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1u4vo7pqfh74"]
+
+[ext_resource type="Texture2D" uid="uid://bst356msja1oy" path="res://Graphics/terrain_white.png" id="1_w7edi"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_eshn6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqih4"]
+size = Vector2(64, 64)
+
+[node name="Terrain" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_eshn6")
+
+[node name="SpriteComponent" type="Sprite2D" parent="."]
+texture = ExtResource("1_w7edi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_aqih4")

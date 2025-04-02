@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bf7dkdewhbpc4"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_qvtnn"]
+[ext_resource type="Texture2D" uid="uid://d0udhn6gyaonf" path="res://Graphics/playersprite.png" id="2_7d4d0"]
+[ext_resource type="Script" path="res://Prefabs/replay.gd" id="3_bdhdy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1cbnf"]
+radius = 32.0
+height = 130.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_qvtnn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7d4d0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1cbnf")
+
+[node name="ReplayComponent" type="Node" parent="."]
+script = ExtResource("3_bdhdy")
