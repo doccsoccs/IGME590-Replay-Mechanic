@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_qvtnn"]
 [ext_resource type="Texture2D" uid="uid://d0udhn6gyaonf" path="res://Graphics/playersprite.png" id="2_7d4d0"]
-[ext_resource type="Script" path="res://Prefabs/replay.gd" id="3_bdhdy"]
+[ext_resource type="PackedScene" uid="uid://hybiriiqxwrf" path="res://Prefabs/replay_component.tscn" id="3_1fxje"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1cbnf"]
 radius = 32.0
@@ -17,5 +17,4 @@ texture = ExtResource("2_7d4d0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_1cbnf")
 
-[node name="ReplayComponent" type="Node" parent="."]
-script = ExtResource("3_bdhdy")
+[node name="ReplayComponent" parent="." instance=ExtResource("3_1fxje")]

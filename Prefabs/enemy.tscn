@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://ngpxs4dmi85l"]
+
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_cefjt"]
+[ext_resource type="Texture2D" uid="uid://d0udhn6gyaonf" path="res://Graphics/playersprite.png" id="2_hmijf"]
+[ext_resource type="PackedScene" uid="uid://hybiriiqxwrf" path="res://Prefabs/replay_component.tscn" id="3_we14d"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nseas"]
+radius = 32.0
+height = 128.0
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_cefjt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_hmijf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_nseas")
+
+[node name="ReplayComponent" parent="." instance=ExtResource("3_we14d")]
